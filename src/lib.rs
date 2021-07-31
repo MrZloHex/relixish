@@ -1,7 +1,9 @@
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        assert_eq!(2 + 2, 4);
-    }
+mod analyser;
+use analyser::Analyser;
+
+pub fn relixish(string: String) -> Analyser {
+    let mut analyser = Analyser::new();
+    analyser.add_string(string);
+
+    analyser
 }
