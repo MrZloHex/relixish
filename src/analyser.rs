@@ -1,13 +1,18 @@
 use std::collections::HashMap;
+use super::language_items::pronouns::Pronouns;
 
 pub struct Analyser {
-    string: String
+    string: String,
+
+    pronouns: Pronouns
 }
 
 impl Analyser {
     pub fn new() -> Analyser {
         Analyser {
-            string: String::new()
+            string: String::new(),
+
+            pronouns: Pronouns::new()
         }
     }
 
@@ -17,7 +22,13 @@ impl Analyser {
 
     pub fn analys(&mut self) -> HashMap<String, String>{
         let mut data: HashMap<String, String> = HashMap::new();
-        data.insert("name".to_string(), "Alexey".to_string());
+        
+        let words = self.string.split_whitespace();
+        for word in words {
+            println!("{}", word)
+        }
+
+
 
         data
     }
