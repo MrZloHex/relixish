@@ -12,4 +12,8 @@ impl Analyser {
     pub fn add_string(&mut self, string: String) {
         self.string = string;
     }
+
+    pub fn analys(&mut self) {
+        
+    }
 }
