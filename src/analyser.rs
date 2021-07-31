@@ -16,8 +16,8 @@ impl Analyser {
     }
 
     pub fn analys(&mut self) -> HashMap<String, String>{
-        let data: HashMap<String, String> = HashMap::new();
-
+        let mut data: HashMap<String, String> = HashMap::new();
+        data.insert("name".to_string(), "Alexey".to_string());
 
         data
     }
